@@ -1,20 +1,8 @@
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import {
-  ArrowRight,
-  ExternalLinkIcon,
-  GalleryThumbnails,
-  Hexagon,
-  Images,
-  LinkIcon
-} from 'lucide-react';
-import ImageGalleryCard from '@/components/ImageGalleryCard';
-import { cn } from '@/lib/utils';
-import ExternalLinkCard from '@/components/ExternalLinkCard';
-import VideoCard from '@/components/VideoCard';
-import SocialMediaCard from '@/components/SocialMediaCard';
-import BasicPagination from '@/components/pagination1';
 import ArticleCard from '@/components/ArticleCard';
+import ExternalLinkCard from '@/components/ExternalLinkCard';
+import ImageGalleryCard from '@/components/ImageGalleryCard';
+import VideoCard from '@/components/VideoCard';
+import BasicPagination from '@/components/pagination1';
 
 export default function Home() {
   return (
@@ -86,7 +74,6 @@ export default function Home() {
             description="Esta espécie foi adquirida de agricultores que vendiam seus produtos na estrada nos arredores de São Luís no estado do Maranhão."
             size={3}
           />
-          <BasicPagination />
         </div>
       </div>
     </main>
