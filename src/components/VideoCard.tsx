@@ -23,7 +23,7 @@ export default function VideoCard({
   return (
     <div
       className={cn(
-        'group rounded-xl  relative overflow-hidden bg-black flex flex-col justify-end p-4  aspect-[9/16] col-span-1',
+        'group rounded-xs  relative overflow-hidden bg-black flex flex-col justify-end p-4  aspect-[9/16] col-span-1',
         size === 1 && !Boolean(poster) && 'aspect-[9/16]',
         size === 1 && ' md:col-span-1  ',
         size === 2 && 'sm:min-h-[50svh] md:col-span-2 sm:aspect-auto',

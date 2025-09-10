@@ -11,18 +11,22 @@ export type ExternalLinkCardProps = {
   title: string;
   description: string;
   size?: number;
+  url: string;
+  label?: string;
 };
 
 export default function ExternalLinkCard({
   imgUrl,
   title,
   description,
-  size = 1
+  size = 1,
+  url,
+  label
 }: ExternalLinkCardProps) {
   return (
     <div
       className={cn(
-        'group rounded-xl  relative overflow-hidden bg-black flex flex-col justify-end p-4  aspect-square col-span-1',
+        'group rounded-xs  relative overflow-hidden bg-black flex flex-col justify-end p-4  aspect-square col-span-1',
         size === 1 && !Boolean(imgUrl) && 'aspect-[4/3]',
         size === 1 && 'sm:min-h-[50svh] md:col-span-1 sm:aspect-auto ',
         size === 2 && 'sm:min-h-[50svh] md:col-span-2 sm:aspect-auto',
@@ -43,7 +47,7 @@ export default function ExternalLinkCard({
       )}
       <div
         className={cn(
-          'p-5 w-5/6 max-w-md bg-white text-black z-[5] rounded-md flex flex-col justify-between mt-24',
+          'p-5 w-5/6 max-w-md bg-white text-black z-[5] rounded-xs flex flex-col justify-between mt-24',
           !Boolean(imgUrl) && 'w-full h-full pt-10 pb-6 max-w-full mt-0'
         )}
       >
@@ -57,7 +61,7 @@ export default function ExternalLinkCard({
                 'text-2xl mb-3 md:text-3xl xl:text-4xl'
             )}
           >
-            Seu exemplar te espera na Plataforma9
+            {title}
           </h3>
           <p
             className={cn(
@@ -67,21 +71,17 @@ export default function ExternalLinkCard({
                 'md:max-h-0 group-hover:max-h-36 md:opacity-0 group-hover:opacity-100 pb-5 md:pb-3 group-hover:md:pb-5 group-hover:md:pt-2 pt-2',
               size === 1 &&
                 !Boolean(imgUrl) &&
-                'text-sm mb-5 lg:text-base xl:text-lg',
+                'text-sm mb-5 lg:text-base xl:text-lg lg:mb-12',
               size === 2 && 'mb-5',
               size === 3 && 'mb-5 text-sm'
             )}
           >
-            Livro bilíngue: Português brasileiro/inglês estadunidense, 214
-            páginas. Dimensões: 216mm x 216mm.
+            {description}
           </p>
         </div>
-        <Link
-          href="https://www.plataforma9p9.com/en/product-page/seeds-and-tales"
-          target="_blank"
-        >
+        <Link href={url} target="_blank">
           <Button className={cn('w-full h-12 duration-150 ')}>
-            Adquirira o seu <ExternalLinkIcon />
+            {label ? label : 'Saiba mais'} <ExternalLinkIcon />
           </Button>
         </Link>
       </div>
