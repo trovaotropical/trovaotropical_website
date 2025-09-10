@@ -1,0 +1,6 @@
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+  [plugins.inputs]
+  # Ensure App Router compatibility
+  edge_functions = "true"
