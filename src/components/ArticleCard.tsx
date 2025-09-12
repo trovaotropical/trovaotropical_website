@@ -44,7 +44,7 @@ export default function ArticleCard({
       <div className="p-4 xl:p-6 h-1/2 overflow-hidden relative">
         <div className="absolute w-full h-1/2 bottom-0 left-0 bg-gradient-to-t from-black to-transparent group-hover:via-transparent duration-150"></div>
         <h2 className="font-bold text-3xl xl:text-5xl mb-5">{title}</h2>
-        <p className="text-lg text-muted-foreground mb-3">
+        <p className="text-lg text-muted mb-3">
           A união entre Milho, Feijão e Abóbora é ancestral. Ela é conhecida
           como as 'Três Irmãs', ou Milpa, uma palavra derivada da língua
           indígena Náhuatl, da família de línguas Uto-Astecas. Como uma técnica
@@ -52,14 +52,14 @@ export default function ArticleCard({
           representam uma epistemologia pré-colonial de relevância científica
           para a trajetória da existência humana.
         </p>
-        <p className="text-lg text-muted-foreground mb-3">
+        <p className="text-lg text-muted mb-3">
           As sementes de milho, feijão e abóbora, quando plantadas juntas,
           maximizam a produtividade de cada uma das três, enriquece o solo, e
           contribui robustamente para a nutrição das pessoas. Elas se
           complementam não apenas em crescimento e desenvolvimento, mas também
           em valor nutricional.
         </p>
-        <p className="text-lg text-muted-foreground">
+        <p className="text-lg text-muted">
           O milho, em sua busca pelo máximo de luz possível, cresce
           verticalmente e viabiliza uma estrutura estável para o feijão enramar.
           O feijão, por sua vez, fornece Nitrogênio ao solo, um elemento
