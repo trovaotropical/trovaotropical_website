@@ -11,6 +11,7 @@ import {
   Montserrat
 } from 'next/font/google';
 import './globals.css';
+import Cursor from '@/components/Cursor';
 
 const display = Sora({
   variable: '--font-display',
@@ -37,11 +38,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
         className={`${geistSans.className} ${geistMono.variable} ${display.variable} antialiased`}
       >
         {children}
+        <Cursor />
       </body>
     </html>
   );
