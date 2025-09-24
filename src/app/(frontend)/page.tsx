@@ -12,7 +12,7 @@ export default async function IndexPage(props: IndexPageProps) {
       <PageHeader />
       <TitleAndText />
       <CardsReveal />
-      <div className="h-svh border w-full"></div>
+      <div className="h-svh w-full"></div>
     </div>
   );
 }
