@@ -1,14 +1,18 @@
 import CardsReveal from '@/components/CardsReveal';
 import Hero from '@/components/home/Hero';
+import PhotoBomb from '@/components/home/PhotoBomb';
+import PageHeader from '@/components/PageHeader';
+import TitleAndText from '@/components/TitleAndText';
 
 export type IndexPageProps = {};
 
 export default async function IndexPage(props: IndexPageProps) {
   return (
-    <div>
-      <div className="h-svh border w-full bg-gradient-to-b from-neutral-100 to-neutral-200"></div>
+    <div className="bg-black text-background">
+      <PageHeader />
+      <TitleAndText />
       <CardsReveal />
-      <div className="h-svh border w-full bg-gradient-to-b from-neutral-100 to-neutral-200"></div>
+      <div className="h-svh border w-full"></div>
     </div>
   );
 }

@@ -8,6 +8,7 @@ import {
   useTransform
 } from 'motion/react';
 import { useRef } from 'react';
+import RadialTextGradient from './RadialTextGradient';
 
 export type CardsRevealProps = {};
 
@@ -65,16 +66,19 @@ export default function CardsReveal(props: CardsRevealProps) {
   return (
     <div
       ref={ref}
-      className="lg:h-[300svh] w-full px-4 md:px-8 xl:px-12 bg-black text-background"
+      className=" px-4 md:px-8 xl:px-12 lg:h-[300svh] w-full bg-black text-background"
     >
       <div className="lg:sticky top-0 lg:h-svh w-full flex items-center justify-center py-16">
         <div className="grid w-full">
-          <motion.h1 className="uppercase font- tracking-widest text-xl mb-16 font-display">
+          <motion.p className="uppercase text-sm lg:text-base xl:text-lg tracking-widest">
             Etapas da Pesquisa
-          </motion.h1>
-          <div className="grid lg:flex gap-0 items-center justify-center w-full h-full">
+          </motion.p>
+          <RadialTextGradient size={'sm'}>
+            Pesquisa e fotografia de sementes ancestrais brasileiras
+          </RadialTextGradient>
+          <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full">
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-7xl font-bold">
+              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
                 1
               </div>
               <motion.div
@@ -101,7 +105,7 @@ export default function CardsReveal(props: CardsRevealProps) {
               />
             </div>{' '}
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-7xl font-bold">
+              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
                 2
               </div>
               <motion.div
@@ -128,7 +132,7 @@ export default function CardsReveal(props: CardsRevealProps) {
               />
             </div>{' '}
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-7xl font-bold">
+              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
                 3
               </div>
               <motion.div
