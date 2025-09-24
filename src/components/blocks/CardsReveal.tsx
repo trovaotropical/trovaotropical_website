@@ -8,7 +8,7 @@ import {
   useTransform
 } from 'motion/react';
 import { useRef } from 'react';
-import RadialTextGradient from './RadialTextGradient';
+import RadialTextGradient from '../RadialTextGradient';
 
 export type CardsRevealProps = {};
 
@@ -63,6 +63,22 @@ export default function CardsReveal(props: CardsRevealProps) {
   const width3 = useTransform(scrollYProgress, [0.58, 0.7], ['0%', '100%'], {
     ease: easeInOut
   });
+
+  const color1 = useTransform(
+    scrollYProgress,
+    [0.4, 0.41, 0.5, 0.51],
+    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+  );
+  const color2 = useTransform(
+    scrollYProgress,
+    [0.48, 0.49, 0.6, 0.61],
+    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+  );
+  const color3 = useTransform(
+    scrollYProgress,
+    [0.58, 0.59, 0.8, 0.81],
+    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+  );
   return (
     <div
       ref={ref}
@@ -78,9 +94,12 @@ export default function CardsReveal(props: CardsRevealProps) {
           </RadialTextGradient>
           <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full">
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
+              <motion.div
+                className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
+                style={{ color: color1 }}
+              >
                 1
-              </div>
+              </motion.div>
               <motion.div
                 className="absolute top-0 left-0 w-full duration-300 z-[5] p-8 h-full flex items-end"
                 style={{ clipPath: clipPath1 }}
@@ -105,9 +124,12 @@ export default function CardsReveal(props: CardsRevealProps) {
               />
             </div>{' '}
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
+              <motion.div
+                className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
+                style={{ color: color2 }}
+              >
                 2
-              </div>
+              </motion.div>
               <motion.div
                 className="absolute top-0 left-0 w-full duration-300 z-[5] p-8 h-full flex items-end"
                 style={{ clipPath: clipPath2 }}
@@ -132,9 +154,12 @@ export default function CardsReveal(props: CardsRevealProps) {
               />
             </div>{' '}
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
-              <div className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold">
+              <motion.div
+                className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
+                style={{ color: color3 }}
+              >
                 3
-              </div>
+              </motion.div>
               <motion.div
                 className="absolute top-0 left-0 w-full duration-300 z-[5] p-8 h-full flex items-end"
                 style={{ clipPath: clipPath3 }}

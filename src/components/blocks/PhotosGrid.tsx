@@ -7,7 +7,7 @@ export default function PhotosGrid(props: PhotosGridProps) {
     <div className="py-12 lg:py-16 xl:py-24 px-4 md:px-8 xl:px-12 grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
       {[...Array(12).keys()].map((i) => {
         return (
-          <div className="grid gap-2 relative group">
+          <div key={'photogrid_' + i} className="grid gap-2 relative group">
             <div className="aspect-square relative">
               <img
                 src={`./static/animation/${i > 10 ? i - 10 : i}.jpg`}

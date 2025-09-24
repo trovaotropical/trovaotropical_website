@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'motion/react';
-import RadialTextGradient from './RadialTextGradient';
+import RadialTextGradient from '../RadialTextGradient';
 
 export type TitleAndTextProps = {};
 
 export default function TitleAndText(props: TitleAndTextProps) {
   return (
     <div className="py-12 lg:py-16 xl:py-24 px-4 md:px-8 xl:px-12 w-fit mx-auto">
-      <div className="grid gap-5 max-w-5/6 ml-auto text-pretty lg:text-[2.4vw] font-medium">
+      <div className="grid gap-5 max-w-5/6 text-pretty lg:text-[2vw] leading-[1.5] font-medium">
         <p className="">
           Ao longo de dois anos de expedições pelo país, o projeto coletou mais
           de 300 espécies de sementes únicas. E junto com os guardiões de

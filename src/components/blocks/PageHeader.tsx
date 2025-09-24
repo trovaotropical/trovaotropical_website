@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'motion/react';
-import RadialTextGradient from './RadialTextGradient';
-import PhotoBomb from './home/PhotoBomb';
+import RadialTextGradient from '../RadialTextGradient';
+import PhotoBomb from '../home/PhotoBomb';
 
 export type PageHeaderProps = {};
 

@@ -83,7 +83,7 @@ export default function PhotoBomb({ className }: PhotoBombProps) {
                   className="relative h-full w-full aspect-video shrink-0 "
                 >
                   <motion.img
-                    className="w-full h-full object-contain object-center"
+                    className="w-full h-full object-cover object-center"
                     src={`./static/animation/${n < 10 ? `${n}` : n}.jpg`}
                     style={{
                       zIndex: n
