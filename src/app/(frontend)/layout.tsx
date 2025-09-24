@@ -1,8 +1,22 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Literata } from 'next/font/google';
+import {
+  Gantari,
+  Geist,
+  Geist_Mono,
+  Literata,
+  Nokora,
+  Pathway_Extreme,
+  Rubik,
+  Sora,
+  Montserrat
+} from 'next/font/google';
 import './globals.css';
 
-const geistSans = Literata({
+const display = Sora({
+  variable: '--font-display',
+  subsets: ['latin']
+});
+const geistSans = Montserrat({
   variable: '--font-geist-sans',
   subsets: ['latin']
 });
@@ -25,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} ${geistMono.variable} ${display.variable} antialiased`}
       >
         {children}
       </body>

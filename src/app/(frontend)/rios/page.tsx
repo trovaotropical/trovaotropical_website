@@ -6,8 +6,8 @@ import BasicPagination from '@/components/pagination1';
 
 export default function Home() {
   return (
-    <main className="bg-foreground text-background  min-h-svh">
-      <div className="max-w-[100rem] px-1 mx-auto pt-8 flex flex-col lg:flex-row gap-4 justify-center items-center">
+    <main className="bg-foreground text-background  min-h-svh w-full">
+      <div className="w-full px-1 mx-auto pt-8 flex flex-col lg:flex-row gap-4 justify-center items-center">
         {/* <div className="lg:sticky top-8 rounded-xl  p-6 flex  h-fit "></div> */}
         <div className="w-full md:min-w-2xl max-w-7xl  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
           <ExternalLinkCard
