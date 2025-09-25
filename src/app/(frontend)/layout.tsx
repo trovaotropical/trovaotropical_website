@@ -12,6 +12,7 @@ import {
 } from 'next/font/google';
 import './globals.css';
 import Cursor from '@/components/Cursor';
+import Navbar from '@/components/Navbar';
 
 const display = Sora({
   variable: '--font-display',
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.className} ${geistMono.variable} ${display.variable} antialiased`}
       >
+        <Navbar />
         {children}
         <Cursor />
       </body>

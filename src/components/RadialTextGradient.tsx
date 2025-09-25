@@ -8,7 +8,7 @@ export default function RadialTextGradient({
   size = 'md'
 }: {
   children: React.ReactNode;
-  size?: 'sm' | 'md';
+  size?: 'sm' | 'md' | 'lg';
 }) {
   const ref = useRef<HTMLHeadingElement | null>(null);
 
@@ -44,11 +44,12 @@ export default function RadialTextGradient({
     <h1
       ref={ref}
       className={cn(
-        'font-display text-[12vw] uppercase font-extrabold text-pretty leading-[1] mb-12 text-transparent bg-clip-text',
-        size === 'sm' && 'text-[3.6vw] leading-[1.1]'
+        'font-display text-[5.2vw] uppercase font-extrabold text-pretty leading-[1.05] mb-12 text-transparent bg-clip-text text-justify',
+        size === 'sm' && 'text-[4vw] leading-[1.1]',
+        size === 'lg' && 'text-[12vw] leading-[1]'
       )}
       style={{
-        backgroundImage: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), white, rgba(255,255,255,0.7) 70%)`
+        backgroundImage: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), white, #ccc 70%)`
       }}
     >
       {children}

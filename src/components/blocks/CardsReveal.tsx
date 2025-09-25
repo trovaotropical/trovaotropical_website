@@ -9,6 +9,7 @@ import {
 } from 'motion/react';
 import { useRef } from 'react';
 import RadialTextGradient from '../RadialTextGradient';
+import Title from './Title';
 
 export type CardsRevealProps = {};
 
@@ -18,9 +19,9 @@ export default function CardsReveal(props: CardsRevealProps) {
     target: ref,
     offset: ['start start', 'end center']
   });
-  const opacity1 = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
-  const opacity2 = useTransform(scrollYProgress, [0.05, 0.1], [0, 1]);
-  const opacity3 = useTransform(scrollYProgress, [0.1, 0.15], [0, 1]);
+  const opacity1 = useTransform(scrollYProgress, [0, 0.15], [0, 1]);
+  const opacity2 = useTransform(scrollYProgress, [0.1, 0.25], [0, 1]);
+  const opacity3 = useTransform(scrollYProgress, [0.2, 0.35], [0, 1]);
   const clipPath1 = useTransform(
     scrollYProgress,
     [0.4, 0.5],
@@ -66,18 +67,27 @@ export default function CardsReveal(props: CardsRevealProps) {
 
   const color1 = useTransform(
     scrollYProgress,
-    [0.4, 0.41, 0.5, 0.51],
-    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+    [0.4, 0.42, 0.5, 0.51],
+    ['#ffffffc9', '#ff5b5c', '#ff5b5c', '#333'],
+    {
+      ease: easeInOut
+    }
   );
   const color2 = useTransform(
     scrollYProgress,
-    [0.48, 0.49, 0.6, 0.61],
-    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+    [0.5, 0.52, 0.6, 0.61],
+    ['#ffffffc9', '#ff5b5c', '#ff5b5c', '#333'],
+    {
+      ease: easeInOut
+    }
   );
   const color3 = useTransform(
     scrollYProgress,
-    [0.58, 0.59, 0.8, 0.81],
-    ['#fff', '#ff5b5c', '#ff5b5c', '#333']
+    [0.6, 0.62, 0.8, 0.81],
+    ['#ffffffc9', '#ff5b5c', '#ff5b5c', '#333'],
+    {
+      ease: easeInOut
+    }
   );
   return (
     <div
@@ -86,14 +96,13 @@ export default function CardsReveal(props: CardsRevealProps) {
     >
       <div className="lg:sticky top-0 lg:h-svh w-full flex items-center justify-center py-16">
         <div className="grid w-full">
-          <motion.p className="uppercase text-sm lg:text-base xl:text-lg tracking-widest">
-            Etapas da Pesquisa
-          </motion.p>
-          <RadialTextGradient size={'sm'}>
-            Pesquisa e fotografia de sementes ancestrais brasileiras
-          </RadialTextGradient>
-          <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full">
-            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
+          <Title
+            title={'Pesquisa e fotografia de sementes ancestrais brasileiras'}
+            label={'Etapas da Pesquisa'}
+            size={'sm'}
+          />
+          <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full mt-8">
+            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh lg:max-h-[60svh] overflow-hidden">
               <motion.div
                 className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
                 style={{ color: color1 }}
@@ -105,11 +114,10 @@ export default function CardsReveal(props: CardsRevealProps) {
                 style={{ clipPath: clipPath1 }}
               >
                 <p className="xl:text-lg">
-                  Ao longo de dois anos de expedições pelo país, o projeto
-                  coletou mais de 300 espécies de sementes únicas. E junto com
-                  os guardiões de sementes, registrou os saberes da cultura oral
-                  sobre o cultivo e manejo, propriedades espirituais e
-                  medicinais.
+                  Ao longo de um ano viajamos pelo Brasil por terra, água e ar
+                  para tentar entender mais sobre culturas alimentares nas
+                  florestas e como a soberania alimentar se configurava em cada
+                  bioma.
                 </p>
               </motion.div>
               <motion.div
@@ -123,7 +131,7 @@ export default function CardsReveal(props: CardsRevealProps) {
                 style={{ opacity: opacity1 }}
               />
             </div>{' '}
-            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
+            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh lg:max-h-[60svh] overflow-hidden">
               <motion.div
                 className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
                 style={{ color: color2 }}
@@ -135,11 +143,12 @@ export default function CardsReveal(props: CardsRevealProps) {
                 style={{ clipPath: clipPath2 }}
               >
                 <p className="xl:text-lg">
-                  Ao longo de dois anos de expedições pelo país, o projeto
-                  coletou mais de 300 espécies de sementes únicas. E junto com
-                  os guardiões de sementes, registrou os saberes da cultura oral
-                  sobre o cultivo e manejo, propriedades espirituais e
-                  medicinais.
+                  Das terras indígenas no noroeste do Acre, até às hortas
+                  urbanas nas favelas do Rio de Janeiro. Resolvemos não só
+                  registrar a exuberância que cada semente carrega, mas também
+                  contar suas histórias de forma contínua ao legado pré-colonial
+                  da palavra folclore, onde o significado etimológico do termo
+                  'lore', a sabedoria ancestral, reside.
                 </p>
               </motion.div>
               <motion.div
@@ -153,7 +162,7 @@ export default function CardsReveal(props: CardsRevealProps) {
                 style={{ opacity: opacity2 }}
               />
             </div>{' '}
-            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh overflow-hidden">
+            <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh lg:max-h-[60svh] overflow-hidden">
               <motion.div
                 className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"
                 style={{ color: color3 }}
@@ -165,11 +174,11 @@ export default function CardsReveal(props: CardsRevealProps) {
                 style={{ clipPath: clipPath3 }}
               >
                 <p className="xl:text-lg">
-                  Ao longo de dois anos de expedições pelo país, o projeto
-                  coletou mais de 300 espécies de sementes únicas. E junto com
-                  os guardiões de sementes, registrou os saberes da cultura oral
-                  sobre o cultivo e manejo, propriedades espirituais e
-                  medicinais.
+                  Essa pesquisa de campo foi frutífera graças ao acolhimento e
+                  abertura das pessoas que se dispuseram a trocar suas sementes
+                  e saberes conosco: os guardiões de sementes - que são
+                  indivíduos comprometidos com o plantio e a proteção de
+                  genéticas de sementes ancestrais crioulas.
                 </p>
               </motion.div>
               <motion.div

@@ -54,10 +54,7 @@ export default function PhotoBomb({ className }: PhotoBombProps) {
   });
 
   return (
-    <div
-      ref={ref}
-      className={cn('absolute top-0 left-0 w-full h-full', className)}
-    >
+    <div ref={ref} className={cn('pointer-events-none', className)}>
       {!loaded && <div className="absolute z-20 text-lg">Loading…</div>}
 
       {/* <div className="absolute z-30 bottom-0 w-24 right-0 font-mono text-sm flex flex-col gap-2 p-3 bg-black/50 text-white text-center">
@@ -75,13 +72,13 @@ export default function PhotoBomb({ className }: PhotoBombProps) {
       {loaded && (
         <div className="h-full w-full relative">
           {[...Array(10).keys()].map((n) => {
-            if (frame < n || frame > n + 2) return null;
+            if (frame < n || frame > n + 1) return null;
             return (
-              <div className="absolute w-full h-full top-0 left-0">
-                <div
-                  key={`seed_${n}`}
-                  className="relative h-full w-full aspect-video shrink-0 "
-                >
+              <div
+                key={`seed_${n}`}
+                className="absolute w-full h-full top-0 left-0"
+              >
+                <div className="relative h-full w-full aspect-video shrink-0 ">
                   <motion.img
                     className="w-full h-full object-cover object-center"
                     src={`./static/animation/${n < 10 ? `${n}` : n}.jpg`}
