@@ -86,7 +86,7 @@ export default function PhotosGrid(props: PhotosGridProps) {
             className="grid gap-2 relative group"
           >
             <div className="aspect-square relative">
-              <img src={`./static/animation/${item.id}.jpg`} alt="" />
+              <img src={`./static/animation/resized_${item.id}.jpg`} alt="" />
             </div>
             <div className="lg:absolute lg:opacity-0 group-hover:opacity-100 duration-300 lg:flex flex-col top-0 left-0 w-full h-full bg-black/70 backdrop-blur-xs lg:p-4 items-center text-center justify-center">
               <h3 className="font-display uppercase font-extrabold tracking-widest mb-2">
