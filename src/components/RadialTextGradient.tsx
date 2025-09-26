@@ -49,7 +49,7 @@ export default function RadialTextGradient({
         size === 'lg' && 'text-[12vw] leading-[1]'
       )}
       style={{
-        backgroundImage: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), white, #ccc 70%)`
+        backgroundImage: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), white, #bbb 70%)`
       }}
     >
       {children}

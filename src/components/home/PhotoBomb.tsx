@@ -78,9 +78,9 @@ export default function PhotoBomb({ className }: PhotoBombProps) {
                 key={`seed_${n}`}
                 className="absolute w-full h-full top-0 left-0"
               >
-                <div className="relative h-full w-full aspect-video shrink-0 ">
+                <div className="relative h-full w-full shrink-0 ">
                   <motion.img
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-contain object-center"
                     src={`./static/animation/${n < 10 ? `${n}` : n}.jpg`}
                     style={{
                       zIndex: n

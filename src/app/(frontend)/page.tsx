@@ -6,6 +6,7 @@ import CardsReveal from '@/components/blocks/CardsReveal';
 import PageHeader from '@/components/blocks/PageHeader';
 import PhotosGrid from '@/components/blocks/PhotosGrid';
 import TitleAndText from '@/components/blocks/TitleAndText';
+import ImageBackground from '@/components/blocks/ImageBackground';
 
 export type IndexPageProps = {};
 
@@ -22,6 +23,7 @@ export default function IndexPage(props: IndexPageProps) {
         <TitleAndText />
         <CardsReveal />
         <PhotosGrid />
+        <ImageBackground />
       </div>
     </>
   );

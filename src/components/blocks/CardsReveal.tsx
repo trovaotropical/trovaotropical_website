@@ -101,7 +101,7 @@ export default function CardsReveal(props: CardsRevealProps) {
             label={'Etapas da Pesquisa'}
             size={'sm'}
           />
-          <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full mt-8">
+          <div className="grid lg:flex gap-4 md:gap-8 xl:gap-12 items-center justify-center w-full h-full ">
             <div className="w-full lg:w-1/3 aspect-[3/4] 2xl:aspect-square relative max-h-svh lg:max-h-[60svh] overflow-hidden">
               <motion.div
                 className="absolute left-8 top-4 z-10 text-5xl lg:text-[4.6vw] font-bold text-vermelho-400"

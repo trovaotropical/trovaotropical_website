@@ -13,6 +13,7 @@ import {
 import './globals.css';
 import Cursor from '@/components/Cursor';
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const display = Sora({
   variable: '--font-display',
@@ -46,6 +47,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Cursor />
+        <Footer />
       </body>
     </html>
   );
